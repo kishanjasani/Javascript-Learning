@@ -81,3 +81,18 @@ switch ( job ) {
         console.log( 'Other' );
 }
 
+var kishanHeight = 64;
+var kishanAge    = 23;
+var manavHeight  = 70;
+var manavAge     = 21;
+
+var kishanScore = kishanHeight + 5 * kishanAge;
+var manavScore  = manavHeight + 5 * manavAge;
+
+if ( kishanScore > manavScore ) {
+    console.log( 'Kishan wins the game' );
+} else if ( manavScore > kishanScore ) {
+    console.log( 'Manav wins the game' );
+} else if ( manavScore === kishanScore ) {
+    console.log( 'Draw' );
+}
