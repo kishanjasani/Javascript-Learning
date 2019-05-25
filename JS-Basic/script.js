@@ -128,3 +128,23 @@ var years = new Array( 1990, 1998, 1948 );
 
 console.log( names[0] );
 
+// Objects and Properties
+
+var kishan = {
+    name:        'Kishan',
+    lastName:    'Jasani',
+    yearOfBirth: 1990,
+    job:         'teacher',
+    isMarried:    false 
+}
+
+console.log( kishan.lastName );
+console.log( kishan['lastName'] );
+
+var manav = new Object();
+manav.name = 'Manav';
+manav.lastName = 'Jasani';
+manav['yearOfBirth'] = 1969;
+manav.job = 'Civil';
+
+console.log( manav );
