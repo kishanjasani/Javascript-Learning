@@ -96,3 +96,15 @@ if ( kishanScore > manavScore ) {
 } else if ( manavScore === kishanScore ) {
     console.log( 'Draw' );
 }
+
+// function
+
+function calculateAge( yearOfBirth ) {
+    var today = new Date(); 
+    return today.getFullYear() - yearOfBirth;
+}
+
+var yearOfKishan = calculateAge( 1996 );
+var yearOfManav  = calculateAge( 1998 );
+console.log( yearOfKishan );
+console.log( yearOfManav );
