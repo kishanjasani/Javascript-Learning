@@ -7,3 +7,5 @@ Undefined: Data type of a variable which does not have a value yet.
 Null:      Also means 'non-existent'.
 
 Javascript has dynamic typing :- means we do not have to declare variable type.
+
+Precedence table : https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Operator_Precedence
