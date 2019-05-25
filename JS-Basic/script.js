@@ -120,3 +120,11 @@ function someFunction( param ) {
 var someFun = function( param ) {
     // Code..
 }
+
+// Arrays
+
+var names = [ 'Kishan', 'Manav', 'Ankit' ];
+var years = new Array( 1990, 1998, 1948 );
+
+console.log( names[0] );
+
