@@ -62,3 +62,22 @@ if ( 23 === "23") {
 } else {
     console.log( 'Not equal' );
 }
+
+// Boolean and switch statement
+
+var job = 'driver';
+
+switch ( job ) {
+    case 'teacher' :
+        console.log( 'Kishan is Teacher' );
+        break;
+    case 'driver' :
+        console.log( 'Kishan is Driver' );
+        break;
+    case 'cop' :
+        console.log( 'Kishan is Cop' );
+        break;
+    default:
+        console.log( 'Other' );
+}
+
