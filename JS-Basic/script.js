@@ -204,3 +204,25 @@ while ( i < names.length ) {
     console.log( names[i] );
     i++;
 }
+
+var agesOfPerson = [ 2005, 1990, 1996, 1995, 2002, 1991, 1992, 1997, 1998 ];
+var arr          = [];
+var fullAge      = [];
+
+function getCurrentAge( currentAge ) {
+    var today = new Date();
+    return today.getFullYear() - currentAge;
+}
+
+for ( var i = 0; i < agesOfPerson.length; i++ ) {
+    arr[i] = getCurrentAge( agesOfPerson[i] );
+    if ( arr[i] >= 18 ) {
+        fullAge.push( true );
+    } else {
+        fullAge.push( false );
+    }
+}
+
+
+console.log( arr );
+console.log( fullAge );
