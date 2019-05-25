@@ -9,3 +9,34 @@ Null:      Also means 'non-existent'.
 Javascript has dynamic typing :- means we do not have to declare variable type.
 
 Precedence table : https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Operator_Precedence
+
+History of Javascript : 
+
+1996: Changed from livescript to javascript to attract java developers.
+
+1997: ECMAScript 1 became the first version of the javascript language standard:
+* ECMAScript: The language standard;
+* JavaScript: The language in practice.
+
+2009: ECMAScript 5 (ES5) was released with lots of new features.
+
+2015: ECMAScript 2015 (ES6) was released: the biggest update ever.
+
+2015: ECMAScript 2016 (ES2016) was released with minor changes.
+
+ES5 : 
+    *   Fully supported in all modern browsers.
+    *   Ready to be used today (2016).
+
+ES6/ES2015 :
+    *   Only partial support in modern browsers, no support in older browsers;
+    *   Can't use it in production today.
+
+ES2016 :
+    *   Almost no support in modern browsers;
+    *   Can't use it in production today.
+
+Why we are using ES5 :
+    *   ECMAScript 2015 still has very incomplete browser support today.
+    *   When working on older codebases, these will be written in ES5.
+    *   it's easier to learn ES5 and then upgrade to ES6/ES2015.
