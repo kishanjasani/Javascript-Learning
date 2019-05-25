@@ -141,10 +141,45 @@ var kishan = {
 console.log( kishan.lastName );
 console.log( kishan['lastName'] );
 
-var manav = new Object();
-manav.name = 'Manav';
-manav.lastName = 'Jasani';
+var manav            = new Object();
+manav.name           = 'Manav';
+manav.lastName       = 'Jasani';
 manav['yearOfBirth'] = 1969;
-manav.job = 'Civil';
+manav.job            = 'Civil';
 
 console.log( manav );
+
+// Objects and Methods.
+// v1.0
+/*
+var kishan = {
+    name:        'Kishan',
+    lastName:    'Jasani',
+    yearOfBirth: 1996,
+    job:         'teacher',
+    isMarried:    false,
+    family:       [ 'Kishan', 'Manav', 'Father', 'Mother' ],
+    calculateAge: function() {
+        var today = new Date(); 
+        return today.getFullYear() - this.yearOfBirth; // Here 'this' is refer to object kishan.
+    }
+}
+*/
+
+//console.log( kishan.calculateAge() );
+
+// v2.0
+var kishan = {
+    name:        'Kishan',
+    lastName:    'Jasani',
+    yearOfBirth: 1996,
+    job:         'teacher',
+    isMarried:    false,
+    family:       [ 'Kishan', 'Manav', 'Father', 'Mother' ],
+    calculateAge: function() {
+        var today = new Date();
+        this.age  = today.getFullYear() - this.yearOfBirth;
+    }
+};
+kishan.calculateAge();
+console.log( kishan.age );
