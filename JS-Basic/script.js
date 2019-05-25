@@ -108,3 +108,15 @@ var yearOfKishan = calculateAge( 1996 );
 var yearOfManav  = calculateAge( 1998 );
 console.log( yearOfKishan );
 console.log( yearOfManav );
+
+// Statement and expressions
+
+// This is function statement.
+function someFunction( param ) {
+    // Code..
+}
+
+// This is function expression.
+var someFun = function( param ) {
+    // Code..
+}
