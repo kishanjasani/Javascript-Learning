@@ -51,4 +51,42 @@ In Javascript engine first thing happnes is -> Parser( Which reads our code line
                                                     -> Machine code -> so this code is no longer javascript code and that code is directly converted to computer or processor.
                                                             -> Code runs
 
-                                                    
+=> Execution contexts and the execution stack :
+    *   Execution contexts :
+        =>  All JS code needs to run in environment & this environment is called Execution contexts.
+        => A box or container, or a wrapper which stores variables and in which a piece of our code is evaluted and executed
+
+    => The Default Execution context is the GLOBAL Execution contexts.
+        ->  Code that is not inside any function.
+        ->  Associated with the global object.
+        ->  In the browser, that's the window object.
+
+        lastName === window.lastName;   //true
+
+****************************************************************************************************************************
+                                                    Global Execution Context
+****************************************************************************************************************************
+
+var fname = 'Kishan';
+
+function first() {
+    var a = 'Hello!';
+    second();
+    var x = a + fname;
+    console.log( x );
+}
+
+function second() {
+    var b = 'Hii!';
+    third();
+    var y = b + fname;
+    console.log( y );
+}
+
+function third() {
+    var c = 'Hey!';
+    var z = c + fname;
+    console.log( z );
+}
+
+first();
