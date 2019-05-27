@@ -91,6 +91,7 @@ function third() {
 
 first();
 
+================================================================================================================
         Execution stack
         ----------------
                 |
@@ -101,3 +102,25 @@ first();
     Execution Context `second()(Function name)`
                 |
     Execution Context `third()(Function name)` => Once the execution is finished then it will be remove from the top of the stack.
+================================================================================================================
+
+Execution Context in detail: CREATION and EXECUTION phases and hoisting
+
+Execution Context object :- 
+    ->  Variable object 
+    ->  Scope chain
+    ->  'This' Variable 
+
+1.  Creation phase
+    a)  Creation of the Variable Object
+    b)  Creation of the scope chain
+    c)  dETERMINE VALUE OF THE 'this' variable
+
+2.  Execution phase
+    The code of the function that generated the current execution context is ran line by line.
+
+a)  Creation of the Variable Object : 
+    The argument object is created, containing all the arguments that were passed into the function.
+    Code is scanned for function declarations: for each function, a property is created in the Variable Object, pointing to the function.   | Variable Hoisting
+    Code is scanned for Variable declarations: for each variable, a property is created in the Variable Object and set to undefined.        | Variable Hoisting
+    
