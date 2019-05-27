@@ -90,3 +90,14 @@ function third() {
 }
 
 first();
+
+        Execution stack
+        ----------------
+                |
+    Global Execution context
+                |
+    Execution Context `first()(Function name)`
+                |
+    Execution Context `second()(Function name)`
+                |
+    Execution Context `third()(Function name)` => Once the execution is finished then it will be remove from the top of the stack.
