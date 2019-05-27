@@ -223,6 +223,29 @@ for ( var i = 0; i < agesOfPerson.length; i++ ) {
     }
 }
 
-
 console.log( arr );
 console.log( fullAge );
+
+var fname = 'Kishan';
+
+function first() {
+    var a = 'Hello!';
+    second();
+    var x = a + fname;
+    console.log( x );
+}
+
+function second() {
+    var b = 'Hii!';
+    third();
+    var y = b + fname;
+    console.log( y );
+}
+
+function third() {
+    var c = 'Hey!';
+    var z = c + fname;
+    console.log( z );
+}
+
+first();
