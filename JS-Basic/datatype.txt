@@ -40,3 +40,15 @@ Why we are using ES5 :
     *   ECMAScript 2015 still has very incomplete browser support today.
     *   When working on older codebases, these will be written in ES5.
     *   it's easier to learn ES5 and then upgrade to ES6/ES2015.
+
+How javascript works behind scenes : Javascript parser and engine
+    *   
+
+
+    OUR CODE  ====>  JAVASCRIPT ENGINE (Spider monkey, Google's v8 engine that is using google chrome.)
+
+In Javascript engine first thing happnes is -> Parser( Which reads our code line by line and checks if the syntax of the code that we gave it is correct. ) Abstract syntax tree -> If every thing is currect than parser produces a datastructure know as the abstract syntax tree. which transalte into
+                                                    -> Machine code -> so this code is no longer javascript code and that code is directly converted to computer or processor.
+                                                            -> Code runs
+
+                                                    
