@@ -249,3 +249,28 @@ function third() {
 }
 
 first();
+
+// Hoisting
+calculateAge( 1996 );
+function calculateAge( year ) {
+	console.log( 2019 - year );
+}
+// calculateAge( 1996 );
+
+// retirement( 1996 ); // It will produce an error of Uncaught TypeError: retirement is not a function
+// It only work for function declaration
+var retirement = function( year ) {
+	console.log( 65 - ( 2019 - year ) );
+}
+
+retirement( 1996 );
+
+var age = 25;
+
+function foo() {
+	console.log( age );
+	var age = 65;
+	console.log( age );
+}
+foo();
+console.log( age );
