@@ -52,15 +52,15 @@ var age = 26;
 var isMarried = 'yes';
 // isMarried = prompt('Is Married ? yes/no ');
 if ( isMarried === 'yes' ) {
-    console.log( name + ' is married' );
+	console.log( name + ' is married' );
 } else {
-    console.log( name + ' is not married' );
+	console.log( name + ' is not married' );
 }
 
 if ( 23 === "23") {
-    console.log( 'Yes equal' );
+	console.log( 'Yes equal' );
 } else {
-    console.log( 'Not equal' );
+	console.log( 'Not equal' );
 }
 
 // Boolean and switch statement
@@ -68,17 +68,17 @@ if ( 23 === "23") {
 var job = 'driver';
 
 switch ( job ) {
-    case 'teacher' :
-        console.log( 'Kishan is Teacher' );
-        break;
-    case 'driver' :
-        console.log( 'Kishan is Driver' );
-        break;
-    case 'cop' :
-        console.log( 'Kishan is Cop' );
-        break;
-    default:
-        console.log( 'Other' );
+	case 'teacher' :
+		console.log( 'Kishan is Teacher' );
+		break;
+	case 'driver' :
+		console.log( 'Kishan is Driver' );
+		break;
+	case 'cop' :
+		console.log( 'Kishan is Cop' );
+		break;
+	default:
+		console.log( 'Other' );
 }
 
 var kishanHeight = 64;
@@ -90,18 +90,18 @@ var kishanScore = kishanHeight + 5 * kishanAge;
 var manavScore  = manavHeight + 5 * manavAge;
 
 if ( kishanScore > manavScore ) {
-    console.log( 'Kishan wins the game' );
+	console.log( 'Kishan wins the game' );
 } else if ( manavScore > kishanScore ) {
-    console.log( 'Manav wins the game' );
+	console.log( 'Manav wins the game' );
 } else if ( manavScore === kishanScore ) {
-    console.log( 'Draw' );
+	console.log( 'Draw' );
 }
 
 // function
 
 function calculateAge( yearOfBirth ) {
-    var today = new Date(); 
-    return today.getFullYear() - yearOfBirth;
+	var today = new Date(); 
+	return today.getFullYear() - yearOfBirth;
 }
 
 var yearOfKishan = calculateAge( 1996 );
@@ -113,12 +113,12 @@ console.log( yearOfManav );
 
 // This is function statement.
 function someFunction( param ) {
-    // Code..
+	// Code..
 }
 
 // This is function expression.
 var someFun = function( param ) {
-    // Code..
+	// Code..
 }
 
 // Arrays
@@ -131,11 +131,11 @@ console.log( names[0] );
 // Objects and Properties
 
 var kishan = {
-    name:        'Kishan',
-    lastName:    'Jasani',
-    yearOfBirth: 1990,
-    job:         'teacher',
-    isMarried:    false 
+	name:        'Kishan',
+	lastName:    'Jasani',
+	yearOfBirth: 1990,
+	job:         'teacher',
+	isMarried:    false 
 }
 
 console.log( kishan.lastName );
@@ -153,16 +153,16 @@ console.log( manav );
 // v1.0
 /*
 var kishan = {
-    name:        'Kishan',
-    lastName:    'Jasani',
-    yearOfBirth: 1996,
-    job:         'teacher',
-    isMarried:    false,
-    family:       [ 'Kishan', 'Manav', 'Father', 'Mother' ],
-    calculateAge: function() {
-        var today = new Date(); 
-        return today.getFullYear() - this.yearOfBirth; // Here 'this' is refer to object kishan.
-    }
+	name:        'Kishan',
+	lastName:    'Jasani',
+	yearOfBirth: 1996,
+	job:         'teacher',
+	isMarried:    false,
+	family:       [ 'Kishan', 'Manav', 'Father', 'Mother' ],
+	calculateAge: function() {
+		var today = new Date(); 
+		return today.getFullYear() - this.yearOfBirth; // Here 'this' is refer to object kishan.
+}
 }
 */
 
@@ -170,16 +170,16 @@ var kishan = {
 
 // v2.0
 var kishan = {
-    name:        'Kishan',
-    lastName:    'Jasani',
-    yearOfBirth: 1996,
-    job:         'teacher',
-    isMarried:    false,
-    family:       [ 'Kishan', 'Manav', 'Father', 'Mother' ],
-    calculateAge: function() {
-        var today = new Date();
-        this.age  = today.getFullYear() - this.yearOfBirth;
-    }
+	name:        'Kishan',
+	lastName:    'Jasani',
+	yearOfBirth: 1996,
+	job:         'teacher',
+	isMarried:    false,
+	family:       [ 'Kishan', 'Manav', 'Father', 'Mother' ],
+	calculateAge: function() {
+		var today = new Date();
+		this.age  = today.getFullYear() - this.yearOfBirth;
+	}
 };
 kishan.calculateAge();
 console.log( kishan.age );
@@ -187,22 +187,22 @@ console.log( kishan.age );
 // Loops
 
 for ( var i=0; i < 10; i++ ) {
-    console.log( i );    
+	console.log( i );    
 }
 
 var names = [ 'kishan', 'manav', 'ankit', 'mehul', 'abhi' ];
 for ( var i = 0; i < names.length; i++ ) {
-    console.log( names[i] );
+	console.log( names[i] );
 }
 
 for ( var i= names.length - 1; i >= 0; i-- ) {
-    console.log( names[i] );
+	console.log( names[i] );
 }
 
 var i = 0;
 while ( i < names.length ) {
-    console.log( names[i] );
-    i++;
+	console.log( names[i] );
+	i++;
 }
 
 var agesOfPerson = [ 2005, 1990, 1996, 1995, 2002, 1991, 1992, 1997, 1998 ];
@@ -210,17 +210,17 @@ var arr          = [];
 var fullAge      = [];
 
 function getCurrentAge( currentAge ) {
-    var today = new Date();
-    return today.getFullYear() - currentAge;
+	var today = new Date();
+	return today.getFullYear() - currentAge;
 }
 
 for ( var i = 0; i < agesOfPerson.length; i++ ) {
-    arr[i] = getCurrentAge( agesOfPerson[i] );
-    if ( arr[i] >= 18 ) {
-        fullAge.push( true );
-    } else {
-        fullAge.push( false );
-    }
+	arr[i] = getCurrentAge( agesOfPerson[i] );
+	if ( arr[i] >= 18 ) {
+		fullAge.push( true );
+	} else {
+		fullAge.push( false );
+	}
 }
 
 console.log( arr );
@@ -229,23 +229,23 @@ console.log( fullAge );
 var fname = 'Kishan';
 
 function first() {
-    var a = 'Hello!';
-    second();
-    var x = a + fname;
-    console.log( x );
+	var a = 'Hello!';
+	second();
+	var x = a + fname;
+	console.log( x );
 }
 
 function second() {
-    var b = 'Hii!';
-    third();
-    var y = b + fname;
-    console.log( y );
+	var b = 'Hii!';
+	third();
+	var y = b + fname;
+	console.log( y );
 }
 
 function third() {
-    var c = 'Hey!';
-    var z = c + fname;
-    console.log( z );
+	var c = 'Hey!';
+	var z = c + fname;
+	console.log( z );
 }
 
 first();
