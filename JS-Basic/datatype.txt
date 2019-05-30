@@ -132,4 +132,11 @@ Each new functiobn creates a scope : the space/environment, in which the variabl
 
 Lexical scoping: a function that is lexically within another function gets access to the scope of the outer function.
 
+`This` keyword :- 
+===============================
+Regular function call : 
+the this keyword points to the global object, (the window object, in the browser).
 
+Method call : the this variable points to the object that is calling the method.
+
+== The this keyword is not assign a value until a function where it is defined is actually called.
