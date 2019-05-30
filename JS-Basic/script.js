@@ -298,3 +298,36 @@ function first() {
 	//==============================================
 }
 //===============================================================
+
+// This keyword
+
+// console.log( this );
+
+calculateAge( 1996 );
+function calculateAge( year ) {
+	console.log( 2019 - year );
+	console.log( this ); // window
+}
+
+var kishan = {
+	name:         'kishan',
+	yearOfBirth:  1996,
+	calculateAge: function() {
+		console.log( this ); // kishan
+		console.log( 2019 - this.yearOfBirth );
+		function innerFunction() {
+			console.log( this ); // Window because it's a regular method
+		}
+		innerFunction();
+	}
+}
+kishan.calculateAge();
+
+var manav = {
+	name: 'Manav',
+	yearOfBirth: 1998
+}
+
+// Method borrowing
+manav.calculateAge = kishan.calculateAge;
+manav.calculateAge();
