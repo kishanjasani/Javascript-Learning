@@ -98,6 +98,13 @@
 			console.log( selElement.classList );
 			console.log( selSelect.value );
 		} );
+
+		adder.addEventListener( "click", function() {
+			let tempElement = document.createElement( addElement.value );
+			console.log( tempElement );
+			const mainClass = document.querySelector('#main');
+			mainClass.appendChild( tempElement );
+		} );
 	</script>
 </body>
 </html>
