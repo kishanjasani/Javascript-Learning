@@ -19,24 +19,38 @@
 	</style>
 </head>
 <body>
-	<div>Hello World</div>
+	Add Element :  <select name="addElement"></select>
+	<button name="adder">Add</button>
+	<br>
+	Element Maker : <select name="eleMaker"></select>
+	<br>
 	<input type="text" name="outputText" value="kishan">
 	<br>
-	Backgroug Color : <input type="color" name="bg">
+	Backgroug Color : <input type="color" name="bg" value="#ffffff">
 	<br>
-	Text Color : <input type="color" name="txt">
+	Text Color : <input type="color" name="txt" value="#000000">
 	<br>
 	Toggle Classes : <select name="classes"></select>
 	<br>
-	<button class="btn">Submit</button>
+	<button class="btn">Update</button>
+	<div id="main">
+		<div>Hello World</div>
+		<p>Kishan</p>
+		<span>Javascript</span>
+	</div>
 	<script>
-		const selElement = document.querySelector( "div" );
-		const selnput    = document.querySelector( "input[name=outputText]" );
-		const seBG       = document.querySelector( "input[name=bg]" )
-		const seTxt      = document.querySelector( "input[name=txt]" )
-		const btn        = document.querySelector( ".btn" );
-		const classArray = [ "padded", "addBorder", "bigger" ];
-		const selSelect  = document.querySelector( "select[name=classes]" );
+		const selElement     = document.querySelector( "div" );
+		const selnput        = document.querySelector( "input[name=outputText]" );
+		const seBG           = document.querySelector( "input[name=bg]" )
+		const seTxt          = document.querySelector( "input[name=txt]" )
+		const btn            = document.querySelector( ".btn" );
+		const adder          = document.querySelector( "button[name=adder]" );
+		const classArray     = [ "padded", "addBorder", "bigger" ];
+		const elementArray   = [ "p", "div", "span" ];
+		const selSelect      = document.querySelector( "select[name=classes]" );
+		const eleMaker       = document.querySelector( "select[name=eleMaker]" );
+		const addElement     = document.querySelector( "select[name=addElement]" );
+		let nodeLister;
 
 		document.addEventListener( "DOMContentLoaded", function() {
 			console.log( "DOM Loaded" );
@@ -47,16 +61,40 @@
 				opt.innerHTML = item;
 				selSelect.appendChild( opt );
 			} );
+
+			elementArray.forEach( function( item ) {
+				let opt = document.createElement( "option" );
+				opt.value = item;
+				opt.innerHTML = item;
+				addElement.appendChild( opt );
+			} );
+
+			//nodeLister = document.querySelectorAll( "#main > *" );
+			dropDownBuilder();
 		} );
+
+		function dropDownBuilder() {
+			eleMaker.innerHTML = "";
+			nodeLister = document.querySelectorAll( "#main > *" );
+			nodeLister.forEach( function( item, index ) {
+				console.log( item );
+				console.log( index );
+				let selOption   = document.createElement( "option" );
+				selOption.value = index;
+				selOption.innerText   = item.tagName;
+				eleMaker.appendChild( selOption );
+			} );
+		}
 
 		btn.addEventListener( "click", function() {
 			console.log( event.target );
 			console.log( this );
 			console.log( btn );
-			selElement.textContent           = selnput.value;
-			selElement.style.backgroundColor = seBG.value;
-			selElement.style.color           = seTxt.value;
-			selElement.classList.toggle( selSelect.value )
+			let tempElement = nodeLister[eleMaker.value];
+			//tempElement.textContent           = selnput.value;
+			tempElement.style.backgroundColor = seBG.value;
+			tempElement.style.color           = seTxt.value;
+			tempElement.classList.toggle( selSelect.value )
 			console.log( selElement.classList );
 			console.log( selSelect.value );
 		} );
