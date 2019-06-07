@@ -16,7 +16,9 @@
 		const btn        = document.querySelector( ".btn" );
 
 		btn.addEventListener( "click", function() {
-			console.log( 'Clicked!' );
+			console.log( event.target );
+			console.log( this );
+			console.log( btn );
 		} );
 	</script>
 </body>
