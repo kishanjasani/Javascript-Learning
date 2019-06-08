@@ -331,3 +331,61 @@ var manav = {
 // Method borrowing
 manav.calculateAge = kishan.calculateAge;
 manav.calculateAge();
+
+// Implicite binding with this keyword
+
+var Person = function( name, age ) {
+	return {
+		name:    name,
+		age:     age,
+		sayName: function() {
+			console.log( this.name + ' Person name' );
+		},
+		mother: {
+			name: 'Dayaben',
+			sayName: function() {
+				console.log( this.name + ' Mother name' );
+			}	
+		}
+	};
+};
+
+var kishan = Person( 'Kishan', 23 );
+kishan.sayName();
+kishan.mother.sayName();
+
+// Explicit binding with .call, .apply, .bind
+
+var dayaben = {
+	name: 'Dayaben',
+	age:  42
+};
+var languanges = [ 'javascript', 'java', 'python' ];
+
+function sayName( lan1, lan2, lan3 ) {
+	console.log( 'My mother name is :- ' + this.name + ' ' + 'and she knows ' + lan1 + ' ' + lan2 + ' ' + lan3 );
+}
+
+//sayName.call( dayaben, languanges[0], languanges[1], languanges[2] ); // Don't do this instead of this use apply();
+
+sayName.apply( dayaben, languanges );
+
+// .bind() is almost same as .call() method
+
+var newFn = sayName.bind( dayaben, languanges[0], languanges[1], languanges[2] );
+console.log( 'Here!' );
+newFn();
+// Bind is return a new function instead of invoking
+
+// The new and window binding
+
+var Animal = function( color, name, type ) {
+	this.color = color;
+	this.name  = name;
+	this.type  = type;
+};
+var zebra = new Animal( 'Black and white', 'Zerro', 'Zebra' );
+
+// Window binding
+
+
